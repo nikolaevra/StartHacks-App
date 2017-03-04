@@ -119,6 +119,10 @@ function update(_id, userParam) {
     });
 
     function updateUser() {
+        //new
+        //db.users.update({"username":username},{$set:{"facebook" : userParam.facebook}})
+
+
         // fields to update
         var set = {
             firstName: userParam.firstName,
@@ -129,6 +133,7 @@ function update(_id, userParam) {
             instagram: userParam.instagram,
             snapchat: userParam.snapchat
         };
+
 
         // update password if it was entered
         if (userParam.password) {
