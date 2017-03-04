@@ -20,6 +20,8 @@
         }
 
         function userAddLink() {
+            window.alert("test");
+
             UserService.AddLink(vm.user)
                 .then(function () {
                     FlashService.Success('User updated');
