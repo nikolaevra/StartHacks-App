@@ -1,4 +1,14 @@
 ﻿<%- include('partials/header') %>
+
+<header class="header">
+    <div class="text-vertical-center">
+        <h1></h1>
+        <h3></h3>
+        <br>
+        <a href="#about" class="btn btn-dark btn-lg">Find Out More</a>
+    </div>
+</header>
+
 <div class="form-container">
     <h2>Login</h2>
     <% if(locals.error) { %>
@@ -22,4 +32,5 @@
         </div>
     </form>
 </div>
+
 <%- include('partials/footer') %>
