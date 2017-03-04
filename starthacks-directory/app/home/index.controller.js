@@ -18,6 +18,16 @@
                 vm.user = user;
             });
         }
+
+        function userAddLink() {
+            UserService.AddLink(vm.user)
+                .then(function () {
+                    FlashService.Success('User updated');
+                })
+                .catch(function (error) {
+                    FlashService.Error(error);
+                });
+        }
     }
 
 })();

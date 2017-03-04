@@ -46,7 +46,12 @@
             return $http.delete('/api/users/' + _id).then(handleSuccess, handleError);
         }
 
+        function AddLink(user) {
+            return $http.put('/api/users/' + user._id, user).then(handleSuccess, handleError);
+        }
         // private functions
+
+
 
         function handleSuccess(res) {
             return res.data;
