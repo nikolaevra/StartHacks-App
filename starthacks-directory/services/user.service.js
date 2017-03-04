@@ -141,6 +141,13 @@ function update(_id, userParam) {
     return deferred.promise;
 }
 
+function addNewField(_id, userParam) {
+
+
+
+}
+
+
 function _delete(_id) {
     var deferred = Q.defer();
 
@@ -154,3 +161,4 @@ function _delete(_id) {
 
     return deferred.promise;
 }
+
