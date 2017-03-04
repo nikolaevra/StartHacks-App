@@ -23,11 +23,12 @@ router.post('/', function (req, res) {
                 error: response.body,
                 firstName: req.body.firstName,
                 lastName: req.body.lastName,
-                username: req.body.username,
                 facebook: req.body.facebook,
                 twitter: req.body.twitter,
                 instagram: req.body.instagram,
                 snapchat: req.body.snapchat,
+                username: req.body.username,
+
 
             });
         }
