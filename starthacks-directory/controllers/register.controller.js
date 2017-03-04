@@ -24,10 +24,10 @@ router.post('/', function (req, res) {
                 firstName: req.body.firstName,
                 lastName: req.body.lastName,
                 username: req.body.username,
-                facebook: "0",
-                twitter: "0",
-                instagram: "0",
-                snapchat: "0",
+                facebook: req.body.facebook,
+                twitter: req.body.twitter,
+                instagram: req.body.instagram,
+                snapchat: req.body.snapchat,
 
             });
         }

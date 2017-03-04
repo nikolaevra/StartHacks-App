@@ -76,7 +76,10 @@ function create(userParam) {
 
         // add hashed password to user object
         user.hash = bcrypt.hashSync(userParam.password, 10);
-
+        user.facebook = bcrypt.hashSync(userParam.password, 10);
+        user.twitter ="0";
+        user.instagram = "0";
+        user.snapchat = "0";
         db.users.insert(
             user,
             function (err, doc) {
