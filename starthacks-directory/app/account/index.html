@@ -1,0 +1,41 @@
+﻿<h1>My Account</h1>
+<div class="form-container">
+    <form method="post">
+        <div class="form-group">
+            <label for="firstName">First name</label>
+            <input type="text" id="firstName" class="form-control" ng-model="vm.user.firstName" required />
+        </div>
+        <div class="form-group">
+            <label for="lastName">Last name</label>
+            <input type="text" id="lastName" class="form-control" ng-model="vm.user.lastName" required />
+        </div>
+        <div class="form-group">
+            <label for="facebook">Facebook</label>
+            <input type="text" id="facebook" class="form-control" ng-model="vm.user.facebook" />
+        </div>
+        <div class="form-group">
+            <label for="twitter">Twitter</label>
+            <input type="text" id="twitter" class="form-control" ng-model="vm.user.twitter" />
+        </div>
+        <div class="form-group">
+            <label for="instagram">Instagram</label>
+            <input type="text" id="instagram" class="form-control" ng-model="vm.user.instagram" />
+        </div>
+        <div class="form-group">
+            <label for="snapchat">Snapchat</label>
+            <input type="text" id="snapchat" class="form-control" ng-model="vm.user.snapchat" />
+        </div>
+        <div class="form-group">
+            <label for="username">Username</label>
+            <input type="username" id="username" class="form-control" ng-model="vm.user.username" required />
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" class="form-control" ng-model="vm.user.password" />
+        </div>
+        <div class="form-group">
+            <button class="btn btn-primary" ng-click="vm.saveUser()">Save</button>
+            <button class="btn btn-danger" ng-click="vm.deleteUser()">Delete</button>
+        </div>
+    </form>
+</div>
