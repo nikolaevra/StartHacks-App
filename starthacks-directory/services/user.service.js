@@ -76,7 +76,10 @@ function create(userParam) {
 
         // add hashed password to user object
         user.hash = bcrypt.hashSync(userParam.password, 10);
-
+        user.facebook = bcrypt.hashSync(userParam.password, 10);
+        user.twitter ="0";
+        user.instagram = "0";
+        user.snapchat = "0";
         db.users.insert(
             user,
             function (err, doc) {
@@ -121,6 +124,10 @@ function update(_id, userParam) {
             firstName: userParam.firstName,
             lastName: userParam.lastName,
             username: userParam.username,
+            facebook: userParam.facebook,
+            twitter: userParam.twitter,
+            instagram: userParam.instagram,
+            snapchat: userParam.snapchat
         };
 
         // update password if it was entered
