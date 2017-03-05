@@ -30,3 +30,18 @@ app.get('/', function (req, res) {
 var server = app.listen(3000, function () {
     console.log('Server listening at http://' + server.address().address + ':' + server.address().port);
 });
+
+
+
+
+
+app.get('*', function(req, res, next){
+    if (req.headers.host == 'buyers.localhost:5000') { //Port is important if the url has it
+        req.url = '/buyers' + req.url;
+    }
+    else if(req.headers.host == 'sellers.localhost:5000') {
+        req.url = '/sellers' + req.url;
+    }
+    next();
+});
+
