@@ -58,19 +58,23 @@ $(this).removeClass("btn-default").addClass("btn-primary");
     <div class="tab-content">
         <div class="tab-pane fade in active" id="tab1">
                 <div class="btn-group">
-                    <a href="{{vm.user.facebook}}" class="btn btn-primary">
-                        <i class="fa fa-cog" aria-hidden="true"></i> Add {{vm.user.firstName}} on Facebook
-                    </a>
+                    <a href="{{vm.user.facebook}}" class="btn btn-primary">Add {{vm.user.firstName}} on Facebook</a>
                 </div>
         </div>
-        <div class="tab-pane fade in" id="tab2">
-            <button type="button" class="btn btn-primary" href="{{vm.user.instagram}}">Add {{vm.user.firstName}} on instagram</button>
+        <div class="tab-pane fade in active" id="tab2">
+            <div class="btn-group">
+                <a href="{{vm.user.twitter}}" class="btn btn-primary">Add {{vm.user.firstName}} on Twitter</a>
+            </div>
         </div>
-        <div class="tab-pane fade in" id="tab3">
-            <button type="button" class="btn btn-primary" href="{{vm.user.twitter}}">Add {{vm.user.firstName}} on twitter</button>
+        <div class="tab-pane fade in active" id="tab3">
+            <div class="btn-group">
+                <a href="{{vm.user.instagram}}" class="btn btn-primary">Add {{vm.user.firstName}} on Instagram</a>
+            </div>
         </div>
-        <div class="tab-pane fade in" id="tab4">
-            <button type="button" class="btn btn-primary" href="{{vm.user.snapchat}}">Add {{vm.user.firstName}} on snapchat</button>
+        <div class="tab-pane fade in active" id="tab4">
+            <div class="btn-group">
+                <a href="{{vm.user.snapchat}}" class="btn btn-primary">Add {{vm.user.firstName}} on Snapchat</a>
+            </div>
         </div>
     </div>
 </div>
