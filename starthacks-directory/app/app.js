@@ -8,7 +8,7 @@
 
     function config($stateProvider, $urlRouterProvider) {
         // default route
-        $urlRouterProvider.otherwise("/");
+        $urlRouterProvider.otherwise("/profile");
 
         $stateProvider
             .state('home', {
@@ -31,7 +31,15 @@
                 controller: 'profile.IndexController',
                 controllerAs: 'vm',
                 data: { activeTab: 'profile' }
-            });
+            })
+            .state('search', {
+                url: '/search',
+                templateUrl: 'search/index.html',
+                controller: 'search.IndexController',
+                controllerAs: 'vm',
+                data: { activeTab: 'search' }
+            })
+        ;
     }
 
     function run($http, $rootScope, $window) {
