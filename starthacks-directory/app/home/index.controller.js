@@ -10,15 +10,11 @@
 
         vm.user = null;
 
-        initController();
-
-        function initController() {
-            // get current user
-            UserService.GetCurrent().then(function (user) {
-                vm.user = user;
-            });
-        }
-
+        vm.user.firstName = "Golden Hawks";
+        vm.user.facebook = "SpottedWLU";
+        vm.user.snapchat = "lauriersnaps";
+        vm.user.twitter = "SpottedLaurier";
+        vm.user.instagram = "https://gradeslam.org/blog_images/241/homecoming.jpg";
     }
 
 })();
