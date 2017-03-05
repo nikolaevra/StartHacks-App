@@ -11,7 +11,9 @@
     </div>
 </div>
 
-<script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<script >
     $(document).ready(function() {
 $(".btn-pref .btn").click(function () {
 $(".btn-pref .btn").removeClass("btn-primary").addClass("btn-default");
@@ -24,27 +26,27 @@ $(this).removeClass("btn-default").addClass("btn-primary");
 <div class="btn-pref btn-group btn-group-justified btn-group-lg" role="group" aria-label="...">
     <div class="btn-group" role="group">
         <button type="button" id="stars" class="btn btn-primary" href="#tab1"
-                data-toggle="tab"  type="button">
+                data-toggle="tab">
             <span class="fa fa-facebook-square" aria-hidden="true"></span>
             <div class="hidden-xs">Facebook</div>
         </button>
     </div>
     <div class="btn-group" role="group">
         <button type="button" id="favorites" class="btn btn-default" href="#tab2"
-                data-toggle="tab" type="button">
+                data-toggle="tab">
             <span class="fa fa-instagram" aria-hidden="true"></span>
             <div class="hidden-xs">Instagram</div>
         </button>
     </div>
     <div class="btn-group" role="group">
         <button type="button" id="following" class="btn btn-default" href="#tab3"
-                data-toggle="tab" type="button">
+                data-toggle="tab">
             <span class="fa fa-twitter" aria-hidden="true"></span>
             <div class="hidden-xs">Twitter</div>
         </button>
     </div>
     <div class="btn-group" role="group">
-        <button type="button" id="following" class="btn btn-default" href="#tab4"
+        <button type="button" id="snap" class="btn btn-default" href="#tab4"
                 data-toggle="tab" type="button">
             <span class="fa fa-snapchat" aria-hidden="true"></span>
             <div class="hidden-xs">Snapchat</div>
@@ -55,13 +57,16 @@ $(this).removeClass("btn-default").addClass("btn-primary");
 <div class="well">
     <div class="tab-content">
         <div class="tab-pane fade in active" id="tab1">
-            <h3>This is tab 1</h3>
+            <button type="button" class="btn btn-primary" href="{{vm.user.facebook}}">Add {{vm.user.firstName}} on facebook</button>
         </div>
         <div class="tab-pane fade in" id="tab2">
-            <h3>This is tab 2</h3>
+            <button type="button" class="btn btn-primary" href="{{vm.user.instagram}}">Add {{vm.user.firstName}} on instagram</button>
         </div>
         <div class="tab-pane fade in" id="tab3">
-            <h3>This is tab 3</h3>
+            <button type="button" class="btn btn-primary" href="{{vm.user.twitter}}">Add {{vm.user.firstName}} on twitter</button>
+        </div>
+        <div class="tab-pane fade in" id="tab4">
+            <button type="button" class="btn btn-primary" href="{{vm.user.snapchat}}">Add {{vm.user.firstName}} on snapchat</button>
         </div>
     </div>
 </div>

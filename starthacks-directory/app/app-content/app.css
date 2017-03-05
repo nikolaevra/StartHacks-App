@@ -21,6 +21,7 @@
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
+
 .card.hovercard {
     position: relative;
     padding-top: 0;
@@ -240,6 +241,12 @@ hr.small {
 }
 
 /* Header */
+
+.backgroundbod{
+    background: url("http://www.dzinepress.com/wp-content/uploads/2011/07/05_stripes.jpg");
+    background-size: cover;
+    -o-background-size: cover;
+}
 
 .header {
     display: table;
