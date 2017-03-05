@@ -57,7 +57,11 @@ $(this).removeClass("btn-default").addClass("btn-primary");
 <div class="well">
     <div class="tab-content">
         <div class="tab-pane fade in active" id="tab1">
-            <button type="button" class="btn btn-primary" href="{{vm.user.facebook}}">Add {{vm.user.firstName}} on facebook</button>
+                <div class="btn-group">
+                    <a href="{{vm.user.facebook}}" class="btn btn-primary">
+                        <i class="fa fa-cog" aria-hidden="true"></i> Add {{vm.user.firstName}} on Facebook
+                    </a>
+                </div>
         </div>
         <div class="tab-pane fade in" id="tab2">
             <button type="button" class="btn btn-primary" href="{{vm.user.instagram}}">Add {{vm.user.firstName}} on instagram</button>
