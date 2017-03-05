@@ -21,14 +21,10 @@
         }
 
         function searchUser() {
-            service.GetByUsername(vm.user)
-                .then(function (user) {
-                    //console.log(user);
-                })
-                .catch(function (error) {
-                    FlashService.Error(error);
-                });
-        }
+            UserService.GetCurrent().then(function (user) {
+                vm.user = user;
+            });
     }
 
+}
 })();

@@ -5,6 +5,9 @@ var userService = require('services/user.service');
 
 // routes
 router.post('/authenticate', authenticateUser);
+//new
+router.post('/dbFindOne', findUser);
+//
 router.post('/register', registerUser);
 router.get('/current', getCurrentUser);
 router.put('/:_id', updateUser);
@@ -14,6 +17,22 @@ module.exports = router;
 
 function authenticateUser(req, res) {
     userService.authenticate(req.body.username, req.body.password)
+        .then(function (token) {
+            if (token) {
+                // authentication successful
+                res.send({ token: token });
+            } else {
+                // authentication failed
+                res.status(401).send('Username or password is incorrect');
+            }
+        })
+        .catch(function (err) {
+            res.status(400).send(err);
+        });
+}
+
+function findUser(req, res) {
+    userService.authenticate(req.body.username)
         .then(function (token) {
             if (token) {
                 // authentication successful

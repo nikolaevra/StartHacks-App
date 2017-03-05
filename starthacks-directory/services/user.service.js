@@ -13,9 +13,26 @@ service.authenticate = authenticate;
 service.getById = getById;
 service.create = create;
 service.update = update;
+service.dbFindOne = dbFindOne;
 service.delete = _delete;
 
 module.exports = service;
+
+
+function dbFindOne(username) {
+    var deferred = Q.defer();
+
+    db.users.findOne({ username: username }, function (err, user) {
+        if (err) deferred.reject(err.name + ': ' + err.message);
+
+            deferred.resolve(jwt.sign({ sub: user._id }, config.secret));
+
+    });
+
+    return deferred.promise;
+}
+
+
 
 function authenticate(username, password) {
     var deferred = Q.defer();
