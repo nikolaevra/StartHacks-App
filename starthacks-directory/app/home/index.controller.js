@@ -15,5 +15,6 @@
         vm.user.snapchat = "lauriersnaps";
         vm.user.twitter = "SpottedLaurier";
         vm.user.instagram = "https://gradeslam.org/blog_images/241/homecoming.jpg";
+    }
 
 })();

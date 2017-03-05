@@ -1,14 +1,18 @@
+<div ng-controller="search.IndexController">
 <div class="container">
     <h1>Search for Users:</h1>
 <div class="form-container">
     <form method="post">
         <div class="form-group">
-            <input type="text" id="user" class="form-control" value="User Name" ng-model="vm.user.firstName"/>
+            <input type="text" id="user" class="form-control" value="User Name" ng-model="name"/>
         </div>
         <div class="form-group">
-            <button class="btn btn-primary"><a ui-sref="home">Search</a></button>
+            <button class="btn btn-primary">Search</button>
         </div>
     </form>
+</div>
+    <h2>Search Results: </h2>
+    <div ng-if="name"><a ui-sref="home" >goldenhawks</a></div>
 
 </div>
 </div>

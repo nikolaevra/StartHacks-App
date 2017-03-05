@@ -5,11 +5,12 @@
         .module('app')
         .controller('search.IndexController', Controller);
 
-    function Controller($window, UserService, FlashService) {
+    function Controller($window, UserService, FlashService, $scope) {
         var vm = this;
 
         vm.user = null;
         vm.searchUser = searchUser;
+        $scope.name = "";
 
         initController();
 
