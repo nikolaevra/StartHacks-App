@@ -57,29 +57,31 @@ $(this).removeClass("btn-default").addClass("btn-primary");
 <div class="well">
     <div class="tab-content">
         <div class="tab-pane fade in active" id="tab1">
-                <div class="btn-group">
-                    <a href="{{vm.user.facebook}}" class="btn btn-primary">Add {{vm.user.firstName}} on Facebook</a>
-                </div>
+            <div id="fb-root"></div>
+            <script>(function(d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) return;
+                js = d.createElement(s); js.id = id;
+                js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8";
+                fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));</script>
+            <div class="fb-follow" style="align-content: center;" data-href="https://www.facebook.com/{{vm.user.facebook}}" data-layout="standard" data-size="large" data-show-faces="true"></div>
         </div>
 
 
         <div class="tab-pane fade in" id="tab2">
 
-            <div class="btn-group">
-                <a href="{{vm.user.twitter}}" class="btn btn-primary">Add {{vm.user.firstName}} on Twitter</a>
-            </div>
         </div>
 
-        <div class="tab-pane fade in" id="tab3">
-            <div class="btn-group">
-                <a href="{{vm.user.instagram}}" class="btn btn-primary">Add {{vm.user.firstName}} on Instagram</a>
-            </div>
+        <div class="tab-pane fade in" id="tab3" style="align-content: center;">
+            <h3> Click the Link to like {{vm.user.firstName}}'s twitter page and bring you directly to his profile: </h3>
+            <a href="https://twitter.com/{{vm.user.twitter}}" class="twitter-follow-button" style="position: center;" data-show-count="false">Follow @{{vm.user.twitter}}</a>
+            <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
         </div>
 
         <div class="tab-pane fade in" id="tab4">
-
             <div class="btn-group">
-                <a href="{{vm.user.snapchat}}" class="btn btn-primary">Add {{vm.user.firstName}} on Snapchat</a>
+                <a href="https://www.snapchat.com/add/{{vm.user.snapchat}}" class="btn btn-primary" style="background-color: #ffce00">Add {{vm.user.firstName}} on Snapchat</a>
             </div>
         </div>
 

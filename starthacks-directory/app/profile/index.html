@@ -44,36 +44,36 @@ $(this).removeClass("btn-default").addClass("btn-primary");
             <div class="hidden-xs">Twitter</div>
         </button>
     </div>
-    <div class="btn-group" role="group">
-        <button type="button" id="snap" class="btn btn-default" href="#tab4"
-                data-toggle="tab" type="button">
-            <span class="fa fa-snapchat" aria-hidden="true"></span>
-            <div class="hidden-xs">Snapchat</div>
-        </button>
-    </div>
 </div>
 
 <div class="well">
     <div class="tab-content">
         <div class="tab-pane fade in active" id="tab1">
-                <div class="btn-group">
-                    <a href="{{vm.user.facebook}}" class="btn btn-primary">Add {{vm.user.firstName}} on Facebook</a>
-                </div>
+            <div id="fb-root"></div>
+            <script>(function(d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) return;
+                js = d.createElement(s); js.id = id;
+                js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8";
+                fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));</script>
+            <div class="fb-page" data-href="https://www.facebook.com/SpottedWLU/" data-tabs="timeline" data-width="700" data-width="800"
+                 style="position:center"
+                 data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+                <blockquote cite="https://www.facebook.com/{{vm.user.facebook}}/" class="fb-xfbml-parse-ignore">
+                    <a href="https://www.facebook.com/{{vm.user.facebook}}/">{{vm.user.facebook}}'s Facebook</a>
+                </blockquote>
+            </div>
         </div>
         <div class="tab-pane fade in" id="tab2">
-            <div class="btn-group">
-                <a href="{{vm.user.twitter}}" class="btn btn-primary">Add {{vm.user.firstName}} on Twitter</a>
-            </div>
+            <a class="twitter-timeline full" ng-href="https://twitter.com/{{vm.user.twitter}}">Tweets by {{vm.user.firstName}}</a>
+            <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+            <h3> Can't view your tweets? Your twitter may be set to private. Change it in on the setting page. </h3>
         </div>
         <div class="tab-pane fade in" id="tab3">
-            <div class="btn-group">
-                <a href="{{vm.user.instagram}}" class="btn btn-primary">Add {{vm.user.firstName}} on Instagram</a>
-            </div>
-        </div>
-        <div class="tab-pane fade in" id="tab4">
-            <div class="btn-group">
-                <a href="{{vm.user.snapchat}}" class="btn btn-primary">Add {{vm.user.firstName}} on Snapchat</a>
-            </div>
+            <a class="twitter-timeline full" ng-href="https://twitter.com/{{vm.user.twitter}}">Tweets by {{vm.user.firstName}}</a>
+            <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+            <h3> Can't view your tweets? Your twitter may be set to private. Change it in on the setting page. </h3>
         </div>
     </div>
 </div>

@@ -384,3 +384,9 @@ footer {
     background-color: #f5f5f5;
     width: 100%;
 }
+
+.full{
+    width: 100%;
+}
+
+iframe[id^='twitter-widget-']{ width:100% !important;}
