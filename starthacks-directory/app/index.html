@@ -13,14 +13,11 @@
 <body class="container backgroundbod">
     <!-- header -->
     <header>
-        <ul class="nav nav-tabs">
-            <li ng-class="{active: activeTab === 'home'}"><a ui-sref="home">Home</a></li>
-            <li ng-class="{active: activeTab === 'account'}"><a ui-sref="account">Account</a></li>
+        <ul class="navigation">
+            <li><a class="active" ui-sref="profile">Profile</a></li>
+            <li><a ui-sref="account">Account</a></li>
             <li><a href="/login" target="_self">Logout</a></li>
         </ul>
-        <div class="flash-message" ng-if="flash">
-            <div class="{{'alert alert-' + flash.type}}" ng-bind="flash.message"></div>
-        </div>
     </header>
 
     <!-- main -->
