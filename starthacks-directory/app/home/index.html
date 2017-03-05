@@ -1,10 +1,10 @@
 ﻿<div class="card hovercard">
     <div class="card-background">
-        <img class="card-bkimg" alt="" src="https://students.wlu.ca/wellness-and-recreation/athletics-and-recreation/assets/images/laurier-athletics-varsity-banner.jpg">
+        <img class="card-bkimg" alt="" src="{{vm.user.instagram}}">
         <!-- http://lorempixel.com/850/280/people/9/ -->
     </div>
     <div class="useravatar">
-        <img alt="" src="https://students.wlu.ca/wellness-and-recreation/athletics-and-recreation/assets/images/laurier-athletics-varsity-banner.jpg">
+        <img alt="" src="{{vm.user.instagram}}">
     </div>
     <div class="card-info"> <span class="card-title">{{vm.user.firstName}}</span>
 
@@ -29,13 +29,6 @@ $(this).removeClass("btn-default").addClass("btn-primary");
                 data-toggle="tab">
             <span class="fa fa-facebook-square" aria-hidden="true"></span>
             <div class="hidden-xs">Facebook</div>
-        </button>
-    </div>
-    <div class="btn-group" role="group">
-        <button type="button" id="favorites" class="btn btn-default" href="#tab2"
-                data-toggle="tab">
-            <span class="fa fa-instagram" aria-hidden="true"></span>
-            <div class="hidden-xs">Instagram</div>
         </button>
     </div>
     <div class="btn-group" role="group">
@@ -67,12 +60,6 @@ $(this).removeClass("btn-default").addClass("btn-primary");
             }(document, 'script', 'facebook-jssdk'));</script>
             <div class="fb-follow" style="align-content: center;" data-href="https://www.facebook.com/{{vm.user.facebook}}" data-layout="standard" data-size="large" data-show-faces="true"></div>
         </div>
-
-
-        <div class="tab-pane fade in" id="tab2">
-
-        </div>
-
         <div class="tab-pane fade in" id="tab3" style="align-content: center;">
             <h3> Click the Link to like {{vm.user.firstName}}'s twitter page and bring you directly to his profile: </h3>
             <a href="https://twitter.com/{{vm.user.twitter}}" class="twitter-follow-button" style="position: center;" data-show-count="false">Follow @{{vm.user.twitter}}</a>
@@ -87,3 +74,5 @@ $(this).removeClass("btn-default").addClass("btn-primary");
 
     </div>
 </div>
+
+<img class ="adbanners" src="https://lh5.ggpht.com/NFYFP2H9CCP50vAQNLa7AtCj_mbbYmOzY978fZqd31oL5qOdvXgxU3KW8ek2VgvIOvTqWY0=w728">

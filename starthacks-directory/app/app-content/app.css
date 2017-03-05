@@ -390,3 +390,8 @@ footer {
 }
 
 iframe[id^='twitter-widget-']{ width:100% !important;}
+
+.adbanners{
+    background-color: #f5f5f5;
+    width: 100%;
+}
