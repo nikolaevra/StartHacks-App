@@ -1,4 +1,4 @@
-﻿(function () {
+(function () {
     'use strict';
 
     angular
@@ -9,13 +9,21 @@
         var vm = this;
 
         vm.user = null;
+        vm.searchUser = searchUser;
 
         initController();
 
-        function saveUser() {
-            UserService.GetByUsername(vm.user)
+        function initController() {
+            // get current user
+            UserService.GetCurrent().then(function (user) {
+                vm.user = user;
+            });
+        }
+
+        function searchUser() {
+            service.GetByUsername(vm.user)
                 .then(function (user) {
-                    //console.log();
+                    //console.log(user);
                 })
                 .catch(function (error) {
                     FlashService.Error(error);
