@@ -124,11 +124,11 @@ function update(_id, userParam) {
         var set = {
             firstName: userParam.firstName,
             lastName: userParam.lastName,
+            username: userParam.username,
             facebook: userParam.facebook,
             twitter: userParam.twitter,
             instagram: userParam.instagram,
             snapchat: userParam.snapchat
-            username: userParam.username,
 
         };
 
